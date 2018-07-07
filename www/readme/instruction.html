@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Инструкция по разметка аудиокорпуса</title>
+</head>
+<body>
+
+<h1>Разметка аудиокорпуса</h1>
+<p>Всем привет! Спасибо, что участвуете в проекте по разметке транскрипций аудиозаписей! :) Выверенные данные будут&nbsp;применяться для обучения и тестирования открытой системы распознавания речи для русского устного языка.</p>
+<h3>ВАЖНО</h3>
+<ol>
+    <li>Имя вводите пожалуйста латинскими буквами</li>
+    <li>Имя используйте всегда одно, иначе вам будут показаны уже просмотренные аудиозаписи</li>
+    <li>Обозначения фонем расположены по <a href="https://github.com/nsu-ai/russian_g2p/blob/master/phoneme_description.pdf" target="_blank">этой ссылке</a> </li>
+</ol>
+<h3>Инструкция</h3>
+<p>Каждый звук обозначается заглавной латинской буквой. Например, S - звук [с]. При этом ударные гласные и мягкие согласные отмечаются "0". Например, ударный звук [а] - А0, [й] - J0. Звук [т^с] (обычно передается с помощью графемы "ц") обозначается TS, его звонкий вариант - DZ, звук [т'^ш'] ("ч") - TSH0, его звонкий вариант - DZH(0), звук [х] - КН, его звонкий вариант (мо[&gamma;] был) - GH. Долгие фонемы обозначаются с помощью латинского символа l после фонемы, например E0 - краткая ударная [e], а E0l - долгая (аналогично для согласных, пр. N и Nl). </p>
+<h4>Примеры транскрипций:</h4>
+<audio controls="">
+    <source src="example_audio/otets_byl.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>отец был<span lang="en-GB">&gt;</span> Неправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">A T E0 </span></span><span style="color: #ff0000;"><span style="text-decoration: line-through;"><span lang="en-GB">TS </span></span></span><span style="text-decoration: line-through;"><span lang="en-GB">B Y0 L</span></span> , Правильная транскрипция: <span lang="en-GB">A T E0 </span><span style="color: #ff0000;"><span lang="en-GB">DZ </span></span><span lang="en-GB">B Y0 L</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/doch_byla.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>дочь была<span lang="en-GB">&gt;</span> Неправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">D O0 </span></span><span style="color: #ff0000;"><span style="text-decoration: line-through;"><span lang="en-GB">TSH0 </span></span></span><span style="text-decoration: line-through;"><span lang="en-GB">B Y0 L A</span></span> , Правильная транскрипция: <span lang="en-GB">D O0 </span><span style="color: #ff0000;"><span lang="en-GB">DZH0 </span></span><span lang="en-GB">B Y0 L A</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/v_khorode.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>в хороде<span lang="en-GB">&gt;</span> Неправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">V </span></span><span style="color: #ff0000;"><span style="text-decoration: line-through;"><span lang="en-GB">G</span></span></span><span style="text-decoration: line-through;"><span lang="en-GB"> O0 R A D0 I</span></span> , Правильная транскрипция: <span lang="en-GB">V </span><span style="color: #ff0000;"><span lang="en-GB">GH </span></span><span lang="en-GB">O0 R A D0 I</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/v_gorode.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>в городе<span lang="en-GB">&gt;</span> Правильная транскрипция: <span lang="en-GB">V </span><span style="color: #ff0000;"><span lang="en-GB">G </span></span><span lang="en-GB">O0 R A D0 I</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/kArova.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>кАрова<span lang="en-GB">&gt;</span> Правильная транскрипция: <span lang="en-GB">K </span><span style="color: #ff0000;"><span lang="en-GB">A</span></span><span lang="en-GB"> R O0 V A</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/kOrova.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>к<span lang="en-GB">O</span>рова<span lang="en-GB">&gt;</span> Неправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">K </span></span><span style="color: #ff0000;"><span style="text-decoration: line-through;"><span lang="en-GB">A</span></span></span><span style="text-decoration: line-through;"><span lang="en-GB"> R O0 V A</span></span>, Правильная транскрипция: <span lang="en-GB">K </span><span style="color: #ff0000;"><span lang="en-GB">O</span></span><span lang="en-GB"> R O0 V A</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/pItsot.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>пИтьсот<span lang="en-GB">&gt;</span> Правильная транскрипция: <span lang="en-GB">P0 </span><span style="color: #ff0000;"><span lang="en-GB">I </span></span><span lang="en-GB">TS O0 T</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/pYatsot.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>пЯтьсот<span lang="en-GB">&gt;</span> Неправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">P0 </span></span><span style="color: #ff0000;"><span style="text-decoration: line-through;"><span lang="en-GB">I </span></span></span><span style="text-decoration: line-through;"><span lang="en-GB">TS O0 T</span></span>, Правильная транскрипция: <span lang="en-GB">P0 </span><span style="color: #ff0000;"><span lang="en-GB">A </span></span><span lang="en-GB">TS O0 T</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/bez_pauzy.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>без паузы<span lang="en-GB">&gt;</span> Правильная транскрипция: <span lang="en-GB">O0 N P R0 I SH O0 L A J0 A0 N0 E0 T</span></p>
+<p>&nbsp;</p>
+<audio controls="">
+    <source src="example_audio/pauza.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<p><span lang="en-GB">&lt;</span>паузa<span lang="en-GB">&gt;</span> Heправильная транскрипция: <span style="text-decoration: line-through;"><span lang="en-GB">O0 N P R0 I SH O0 L A J0 A0 N0 E0 T</span></span>, Правильная транскрипция: <span lang="en-GB">O0 N P R0 I SH O0 L</span> <span style="color: #ff0000;"><span lang="en-GB">&lt;sil&gt;</span></span><span lang="en-GB"> A J0 A0 N0 E0 T</span></p>
+<p>&nbsp;</p>
+<h2>Успехов в разметке!</h2>
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+</body>
+</html>

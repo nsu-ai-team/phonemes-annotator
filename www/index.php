@@ -13,14 +13,15 @@
 
 <br/>
 <br/>
-<h2>Инструкция</h2>
-<ol>
-    <li>Имя вводите пожалуйста латинскими буквами</li>
-    <li>Имя используйте всегда одно, иначе вам будут показаны уже просмотренные аудиозаписи</li>
-    <li>Полная инструкция здесь <a href="https://vk.com/doc52036357_467213578?hash=74877c42a4a64b1d9e&dl=2a78b465580a022fdb"
-                                   target="_blank">(Документ из ВК)</a></li>
-    <li>Обозначения фонем <a href="https://github.com/nsu-ai/russian_g2p/blob/master/phoneme_description.pdf" target="_blank">PDF</a> </li>
-</ol>
+<h2>Впервые здесь? Тогда обязательно предварительно <a href="readme/instruction.html" target="_blank">прочитайте инструкцию</a></h2>
+<!--<h2>Инструкция</h2>-->
+<!--<ol>-->
+<!--    <li>Имя вводите пожалуйста латинскими буквами</li>-->
+<!--    <li>Имя используйте всегда одно, иначе вам будут показаны уже просмотренные аудиозаписи</li>-->
+<!--    <li>Полная инструкция здесь <a href="https://vk.com/doc52036357_467213578?hash=74877c42a4a64b1d9e&dl=2a78b465580a022fdb"-->
+<!--                                   target="_blank">(Документ из ВК)</a></li>-->
+<!--    <li>Обозначения фонем <a href="https://github.com/nsu-ai/russian_g2p/blob/master/phoneme_description.pdf" target="_blank">PDF</a> </li>-->
+<!--</ol>-->
 
 
 <?php
