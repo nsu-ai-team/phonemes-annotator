@@ -1,6 +1,6 @@
 <?php error_reporting(E_ALL & ~E_NOTICE); ?>
 <?php if (empty($_GET['name'])) {header('Location: /');} ?><!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Assessors</title>
@@ -8,7 +8,8 @@
 <body>
 
 <?php
-$conn = new mysqli('localhost', 'username', 'password', 'dbname');
+// $conn = new mysqli('localhost', 'username', 'password', 'dbname');
+
 
 
 // Check connection
@@ -18,8 +19,10 @@ if ($conn->connect_error) {
 
 if (!empty($_GET['trans']) && !empty($_GET['wav_id']) && !empty($_GET['dir_id'])){
     // saving
+    $trans_pre_save = str_replace("\n", "", $_GET['trans']);
+    $trans_pre_save = str_replace("\r", "", $trans_pre_save);
     $sql = "INSERT INTO trans (wav_id, transcription, assessor_name, dir_name) 
-    VALUES ('".addslashes($_GET['wav_id'])."', '".addslashes($_GET['trans'])."', '".addslashes($_GET['name'])."', '".addslashes($_GET['dir_id'])."')";
+    VALUES ('".addslashes($_GET['wav_id'])."', '".addslashes($trans_pre_save)."', '".addslashes($_GET['name'])."', '".addslashes($_GET['dir_id'])."')";
 
     if ($conn->query($sql) === TRUE) {
 //        echo "New record created successfully";
@@ -110,12 +113,35 @@ if (!$wav_id) {
     <input name="name" type="hidden" value="<?php echo $_GET['name']; ?>" />
     <input name="wav_id" value="<?php echo $wav_id ?>" type="hidden">
     <input name="dir_id" value="<?php echo $cur_dir ?>" type="hidden">
-    <p style="margin: 5px; width: 100%;font-size: x-large"><?php echo $wav_text?></p>
+
+<!--    <p style="margin: 5px; width: 100%;font-size: x-large">--><?php //echo $wav_text?><!--</p>-->
+
     <br />
-    <input type="text" value="<?php echo $wav_tr ?>" style="width: 100%;" name="trans" />
+    <br />
+<!--    <input type="text" value="--><?php //echo $wav_tr ?><!--" style="width: 100%;" name="trans" />-->
+<!--    <br />-->
+
+    <span>Текст</span><div style="display: inline-block;width: 130px;"></div><span>Транскрипция</span><br />
+
+    <textarea rows="24" cols="4" style="font-size: x-large;font-weight: bold;" disabled name="noname_d"><?php
+        # $chars = mb_split("", $wav_text);
+        $chars = preg_split('//u', $wav_text, null, PREG_SPLIT_NO_EMPTY);
+        foreach ($chars as $c) {echo $c."\n";}
+        ?></textarea>
+    <div style="display: inline-block;width: 100px;"></div>
+
+    <textarea rows="24" cols="4" style="font-size: x-large;font-weight: bold;" name="trans" ><?php
+        # $chars = mb_split("", $wav_text);
+        $chars = preg_split('//u', $wav_tr, null, PREG_SPLIT_NO_EMPTY);
+        foreach ($chars as $c) {echo $c."\n";}
+        ?></textarea>
+
     <br />
     <br />
-    <input type="submit" value="Continue">
+    <input type="submit" value="Save and Continue" style="font-size: x-large;">
+    <br />
+    <br />
+
 </form>
 
 </body>
